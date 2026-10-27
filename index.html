@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaterSports Kaki — Find Your Kaki Crew</title>
+<meta name="description" content="Know when to go, find people to go with, and discover new experiences on the water. Singapore's watersports community.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Caveat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0D2C5B;
+  --blue:#1565C0;
+  --sky:#2196F3;
+  --sky-light:#E3F2FD;
+  --white:#FFFFFF;
+  --off-white:#F7FAFF;
+  --mist:#607D8B;
+  --ink:#111827;
+  --coral:#FF5722;
+  --green:#2E7D32;
+  --star:#F59E0B;
+  --max:1160px;
+  --g:clamp(1.25rem,5vw,2.5rem);
+}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(13,44,91,.08)}
+.hdr{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo img{height:46px;width:auto}
+.logo-text{display:flex;flex-direction:row;align-items:center;gap:4px;line-height:1}
+.logo-text .t1{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:var(--navy);letter-spacing:.02em;text-transform:uppercase}
+.logo-text .t2{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.75rem;color:var(--sky);letter-spacing:.02em;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:1.75rem}
+nav a{font-size:.875rem;font-weight:500;color:var(--mist);text-decoration:none;transition:color .15s}
+nav a:hover{color:var(--navy)}
+.btn-nav{background:var(--navy);color:var(--white)!important;padding:8px 18px;border-radius:999px;font-size:.875rem;font-weight:600;text-decoration:none;transition:opacity .15s}
+.btn-nav:hover{opacity:.88}
+.nav-ig{display:flex;align-items:center}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;min-height:86vh;display:flex;align-items:center;padding-bottom:0}
+.hero-bg{position:absolute;inset:0;background:url('selfie2.jpg') center top/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,44,91,.92) 0%,rgba(13,44,91,.85) 28%,rgba(13,44,91,.15) 45%,rgba(13,44,91,0) 58%)}
+.hero-content{position:relative;z-index:2;padding:4rem 0 5rem;max-width:460px;margin-left:0}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:5px 13px;font-size:.8125rem;color:rgba(255,255,255,.85);margin-bottom:1.5rem}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:#4CAF50;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2.2rem,4vw,3.25rem);line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:.5rem}
+h1 .handwrite{font-family:'Caveat',cursive;font-weight:700;color:#64B5F6;display:block;font-size:clamp(2.4rem,4.5vw,3.75rem);line-height:1;text-decoration:underline;text-decoration-color:rgba(100,181,246,.5);text-underline-offset:4px}
+.hero-sub{font-size:clamp(1rem,2vw,1.125rem);color:rgba(255,255,255,.8);max-width:44ch;margin-bottom:2rem;line-height:1.65}
+.btn-cta{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--white);font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:999px;text-decoration:none;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(33,150,243,.45);transition:transform .15s,box-shadow .15s}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(33,150,243,.55)}
+.hero-features{display:flex;flex-direction:column;gap:.625rem;margin-top:1.75rem}
+.hero-feat{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.8);font-size:.875rem}
+.hero-feat-icon{font-size:1.125rem}
+.handwrite-aside{position:absolute;right:clamp(1rem,5vw,80px);top:18%;font-family:'Caveat',cursive;font-size:1.5rem;color:rgba(255,255,255,.9);line-height:1.25;transform:rotate(4deg);z-index:3;text-align:right;pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,var(--off-white));z-index:1;pointer-events:none}
+
+/* VALIDATION */
+.validation{background:var(--off-white);padding:clamp(3rem,7vw,5rem) 0}
+.sec-head{margin-bottom:2.25rem}
+.sec-head h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--navy);letter-spacing:-.02em;margin-bottom:.4rem}
+.sec-head p{color:var(--mist);font-size:.9375rem}
+.needs-scroll{display:flex;gap:.875rem;overflow-x:auto;padding-bottom:4px;-ms-overflow-style:none;scrollbar-width:none}
+.needs-scroll::-webkit-scrollbar{display:none}
+.need-chip{flex-shrink:0;background:var(--white);border:1.5px solid rgba(13,44,91,.08);border-radius:14px;padding:1.125rem 1rem;width:140px;text-align:center;cursor:pointer;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:.5rem;transition:border-color .15s,box-shadow .15s,transform .15s}
+.need-chip:hover{border-color:var(--sky);box-shadow:0 4px 16px rgba(33,150,243,.12);transform:translateY(-2px)}
+.need-chip-icon{font-size:1.75rem}
+.need-chip p{font-size:.8125rem;font-weight:600;color:var(--navy);line-height:1.3}
+
+/* COMMUNITY */
+.community{background:var(--white);padding:clamp(3rem,7vw,5rem) 0}
+.community-layout{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.community-copy h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--navy);letter-spacing:-.02em;line-height:1.15;margin-bottom:.75rem}
+.community-copy p{color:var(--mist);font-size:.9375rem;max-width:42ch;line-height:1.7;margin-bottom:1.5rem}
+.sport-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.625rem;margin-bottom:1.5rem}
+.sport-tile{border-radius:12px;padding:1rem .75rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;cursor:default;transition:transform .15s}
+.sport-tile:hover{transform:translateY(-2px)}
+.sport-tile-label{font-size:.8125rem;font-weight:700;color:var(--navy)}
+.community-right{position:relative}
+.phone-frame{background:var(--white);border-radius:32px;border:2px solid rgba(13,44,91,.12);box-shadow:0 16px 48px rgba(13,44,91,.14);overflow:hidden;max-width:260px;margin:0 auto}
+.phone-status{background:var(--navy);color:rgba(255,255,255,.7);font-size:.6875rem;padding:6px 16px;display:flex;justify-content:space-between}
+.phone-topbar{padding:10px 14px 8px;border-bottom:1px solid rgba(13,44,91,.06);display:flex;align-items:center;justify-content:space-between}
+.phone-topbar-title{font-size:.875rem;font-weight:700;color:var(--navy)}
+.phone-section{padding:10px 14px}
+.phone-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.phone-label{font-size:.75rem;color:var(--mist)}
+.phone-badge{font-size:.6875rem;padding:3px 8px;border-radius:999px;font-weight:600}
+.phone-badge-good{background:#E8F5E9;color:#2E7D32}
+.phone-badge-warn{background:#FFF3E0;color:#E65100}
+.phone-metric{display:flex;align-items:center;gap:5px;font-size:.75rem;color:var(--mist)}
+.phone-metric strong{color:var(--navy)}
+.phone-avatars{display:flex;gap:-3px}
+.phone-av{width:20px;height:20px;border-radius:50%;background:var(--sky-light);border:1.5px solid var(--white);margin-left:-5px;font-size:.5625rem;display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700}
+.phone-av:first-child{margin-left:0}
+.phone-btn{display:block;width:100%;background:var(--sky);color:var(--white);border:none;border-radius:8px;padding:8px;font-size:.8125rem;font-weight:600;cursor:pointer;margin-top:8px;font-family:'Inter',sans-serif;text-align:center}
+.phone-link{display:block;text-align:center;font-size:.75rem;color:var(--sky);margin-top:6px;text-decoration:none}
+.annot{position:absolute;font-family:'Caveat',cursive;font-size:1.1rem;color:var(--navy);line-height:1.3;right:-20px;top:50%;transform:translateY(-50%);width:130px;pointer-events:none}
+.annot-arrow{display:block;font-size:1.5rem;margin-top:4px}
+
+/* EXPERIENCES */
+.experiences{background:var(--off-white);padding:clamp(3rem,7vw,5rem) 0}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.exp-card{background:var(--white);border:1.5px solid rgba(13,44,91,.07);border-radius:16px;overflow:hidden;transition:box-shadow .15s,transform .15s;display:flex;flex-direction:column}
+.exp-card:hover{box-shadow:0 6px 24px rgba(13,44,91,.1);transform:translateY(-2px)}
+.exp-icon-wrap{height:80px;display:flex;align-items:center;justify-content:center;font-size:2.25rem;flex-shrink:0}
+.exp-body{padding:12px;flex:1;display:flex;flex-direction:column}
+.exp-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:.875rem;color:var(--navy);margin-bottom:5px;line-height:1.3}
+.exp-rating{display:flex;align-items:center;gap:4px;margin-bottom:6px}
+.exp-stars{color:var(--star);font-size:.6875rem}
+.exp-rating-num{font-size:.75rem;font-weight:600;color:var(--ink)}
+.exp-rating-count{font-size:.75rem;color:var(--mist)}
+.exp-meta-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:4px}
+.exp-avatars{display:flex;align-items:center}
+.exp-av-init{width:22px;height:22px;border-radius:50%;background:var(--sky-light);border:1.5px solid var(--white);margin-left:-5px;font-size:.5625rem;display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700}
+.exp-av-init:first-child{margin-left:0}
+.exp-again{font-size:.6875rem;color:#E57373;font-weight:500}
+.btn-again{display:block;width:100%;background:transparent;border:1.5px solid var(--sky);color:var(--sky);border-radius:8px;padding:6px;font-size:.8125rem;font-weight:600;cursor:pointer;margin-top:auto;font-family:'Inter',sans-serif;transition:background .15s,color .15s}
+.btn-again:hover{background:var(--sky);color:var(--white)}
+
+/* FOOTER CTA */
+.footer-cta{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center}
+.footer-cta-bg{position:absolute;inset:0;background:url('footer.png') center center/cover no-repeat}
+.footer-cta-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(13,44,91,.96) 0%,rgba(13,44,91,.88) 38%,rgba(13,44,91,.3) 60%,rgba(13,44,91,0) 100%)}
+.footer-cta-content{position:relative;z-index:2;margin-right:auto;max-width:420px;text-align:left;padding:3.5rem var(--g)}
+.footer-cta-content h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--white);letter-spacing:-.02em;margin-bottom:.75rem;line-height:1.2}
+.footer-cta-content p{color:rgba(255,255,255,.75);font-size:1rem;margin-bottom:1.75rem;line-height:1.65}
+.footer-note{margin-top:1rem;font-size:.8125rem;color:rgba(255,255,255,.45)}
+
+/* FOOTER */
+footer{background:#071830;padding:1.75rem 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.footer-logo img{height:36px;width:auto}
+.footer-links{display:flex;align-items:center;gap:1.5rem}
+.footer-links a{font-size:.8125rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:rgba(255,255,255,.8)}
+.footer-right{font-size:.8125rem;color:rgba(255,255,255,.3)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .community-layout{grid-template-columns:1fr;gap:2.5rem}
+  .exp-grid{grid-template-columns:1fr 1fr}
+  .annot{display:none}
+  .phone-frame{max-width:220px}
+  .footer-cta-content{max-width:100%;margin-left:0;background:rgba(13,44,91,.7);}
+}
+@media(max-width:640px){
+  nav .nav-hide{display:none}
+  .exp-grid{grid-template-columns:1fr}
+  h1{font-size:2.4rem}
+  h1 .handwrite{font-size:2.6rem}
+  .sport-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  .badge-dot{animation:none}
+  .btn-cta,.need-chip,.exp-card{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap hdr">
+    <a href="/" class="logo">
+      <img src="logo-symbol.png" alt="WaterSports Kaki symbol">
+      <div class="logo-text">
+        <span class="t1">Watersports</span>
+        <span class="t2">Kaki</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#about" class="nav-hide">About</a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="nav-hide">Give Feedback</a>
+      <a href="https://instagram.com/watersportskaki" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--mist)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mist)" stroke="none"/></svg>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="btn-nav">Join Early Access →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="handwrite-aside">Learn new sports.<br>Make new friends.</div>
+  <div style="width:100%;padding-left:var(--g);padding-right:var(--g)">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Singapore · Currently experimenting
+    </div>
+    <h1>
+      Learn watersports.<br>
+      <span class="handwrite">Find your kakis.</span>
+    </h1>
+    <p class="hero-sub">Know when to go, find people to go with, and discover new experiences on the water.</p>
+    <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="btn-cta">
+      Join the early-access list →
+    </a>
+    <div class="hero-features">
+      <div class="hero-feat"><span class="hero-feat-icon">🌤</span> Conditions tailored for you</div>
+      <div class="hero-feat"><span class="hero-feat-icon">👥</span> Find people at your level</div>
+      <div class="hero-feat"><span class="hero-feat-icon">🧭</span> Discover new experiences</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+<!-- VALIDATION -->
+<section class="validation">
+  <div class="wrap" style="padding-left:var(--g)">
+    <div class="sec-head">
+      <h2>What would make watersports easier for you?</h2>
+      <p>Tell us what you need most. This helps us build the right features.</p>
+    </div>
+    <div class="needs-scroll">
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">⛅</span>
+        <p>I don't know when conditions are suitable</p>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">👥</span>
+        <p>I can't find people to go with</p>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">📈</span>
+        <p>I want to learn and find beginners</p>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">🧭</span>
+        <p>I want to discover a suitable watersport</p>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">📅</span>
+        <p>Organising everyone is difficult</p>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">❤️</span>
+        <p>I'd like to meet people through activities</p>
+      </a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="need-chip">
+        <span class="need-chip-icon">💬</span>
+        <p>Something else</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community" id="about">
+  <div class="wrap" style="padding-left:var(--g)">
+    <div class="community-layout">
+      <div class="community-copy">
+        <h2>Different sports. Same kakis.</h2>
+        <p>From beginners to regulars, find people who share your interests.</p>
+        <div class="sport-grid">
+          <div class="sport-tile" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">
+            <span style="font-size:2.25rem">⛵</span>
+            <span class="sport-tile-label">Windsurfing</span>
+          </div>
+          <div class="sport-tile" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">
+            <span style="font-size:2.25rem">🌊</span>
+            <span class="sport-tile-label">Wakesurfing</span>
+          </div>
+          <div class="sport-tile" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2)">
+            <span style="font-size:2.25rem">🏂</span>
+            <span class="sport-tile-label">Wakeboarding</span>
+          </div>
+          <div class="sport-tile" style="background:linear-gradient(135deg,#EDE7F6,#D1C4E9)">
+            <span style="font-size:2.25rem">🚣</span>
+            <span class="sport-tile-label">Kayaking</span>
+          </div>
+          <div class="sport-tile" style="background:linear-gradient(135deg,#E0F7FA,#B2EBF2)">
+            <span style="font-size:2.25rem">🧘</span>
+            <span class="sport-tile-label">SUP</span>
+          </div>
+          <div class="sport-tile" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD0)">
+            <span style="font-size:2.25rem">🤿</span>
+            <span class="sport-tile-label">Diving</span>
+          </div>
+        </div>
+      </div>
+      <div class="community-right">
+        <div class="phone-frame">
+          <div class="phone-status">
+            <span>9:41</span><span>●●●</span>
+          </div>
+          <div class="phone-topbar">
+            <div class="phone-topbar-title">East Coast</div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mist)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="phone-section">
+            <div class="phone-row">
+              <span class="phone-label">🌊 Windsurfing</span>
+            </div>
+            <div class="phone-row">
+              <span class="phone-label">Wind</span>
+              <span class="phone-badge phone-badge-good">Good for your level</span>
+            </div>
+            <div class="phone-metric">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+              <strong>12–18 knots</strong>
+            </div>
+            <div class="phone-metric" style="margin-top:6px">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <strong>7 people interested</strong>
+            </div>
+            <div style="display:flex;align-items:center;gap:4px;margin-top:8px">
+              <div class="phone-avatars">
+                <div class="phone-av">ZL</div>
+                <div class="phone-av">MK</div>
+                <div class="phone-av">PR</div>
+              </div>
+              <span style="font-size:.6875rem;color:var(--mist)">+3 more</span>
+            </div>
+            <button class="phone-btn" onclick="this.textContent=this.textContent==='I\'m interested'?'Interested ✓':'I\'m interested'">I'm interested</button>
+            <a href="#" class="phone-link">See details</a>
+          </div>
+        </div>
+        <div class="annot">
+          Conditions for your level, not just numbers.
+          <span class="annot-arrow">↙</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="experiences">
+  <div class="wrap" style="padding-left:var(--g)">
+    <div class="sec-head">
+      <h2>Real people. Real experiences.</h2>
+      <p>Browse past activities from the community and do them again.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="exp-icon-wrap" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">⛵</div>
+        <div class="exp-body">
+          <div class="exp-title">Beginner Windsurf at East Coast</div>
+          <div class="exp-rating">
+            <span class="exp-stars">★★★★★</span>
+            <span class="exp-rating-num">4.8</span>
+            <span class="exp-rating-count">(12)</span>
+          </div>
+          <div class="exp-meta-row">
+            <div class="exp-avatars">
+              <div class="exp-av-init">ZL</div>
+              <div class="exp-av-init">MK</div>
+              <div class="exp-av-init">+8</div>
+            </div>
+            <div class="exp-again">❤️ 14 want to do this again</div>
+          </div>
+          <button class="btn-again">Do this again</button>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">🌊</div>
+        <div class="exp-body">
+          <div class="exp-title">Wakesurf Beginner Session</div>
+          <div class="exp-rating">
+            <span class="exp-stars">★★★★★</span>
+            <span class="exp-rating-num">4.9</span>
+            <span class="exp-rating-count">(8)</span>
+          </div>
+          <div class="exp-meta-row">
+            <div class="exp-avatars">
+              <div class="exp-av-init">PR</div>
+              <div class="exp-av-init">WJ</div>
+              <div class="exp-av-init">+6</div>
+            </div>
+            <div class="exp-again">❤️ 11 want to do this again</div>
+          </div>
+          <button class="btn-again">Do this again</button>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap" style="background:linear-gradient(135deg,#EDE7F6,#D1C4E9)">🤿</div>
+        <div class="exp-body">
+          <div class="exp-title">Sunset Kayak at Lazarus Island</div>
+          <div class="exp-rating">
+            <span class="exp-stars">★★★★☆</span>
+            <span class="exp-rating-num">4.7</span>
+            <span class="exp-rating-count">(6)</span>
+          </div>
+          <div class="exp-meta-row">
+            <div class="exp-avatars">
+              <div class="exp-av-init">AL</div>
+              <div class="exp-av-init">TH</div>
+              <div class="exp-av-init">+4</div>
+            </div>
+            <div class="exp-again">❤️ 9 want to do this again</div>
+          </div>
+          <button class="btn-again">Do this again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="footer-cta-bg"></div>
+  <div class="footer-cta-overlay"></div>
+  <div class="footer-cta-content">
+    <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:.75rem;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Learn new sports. Make new friends.</div>
+    <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);letter-spacing:-.02em;line-height:1.15;margin-bottom:.25rem">You learn a few things.</h2>
+    <div style="font-family:'Caveat',cursive;font-weight:700;font-size:clamp(1.75rem,3.5vw,2.6rem);color:#64B5F6;line-height:1;text-decoration:underline;text-decoration-color:rgba(100,181,246,.4);text-underline-offset:4px;margin-bottom:1rem">You got better.</div>
+    <p style="color:rgba(255,255,255,.75);font-size:.9375rem;margin-bottom:1.5rem;line-height:1.6;max-width:36ch">Be part of a community that helps you get out on the water more often, with the right people.</p>
+    <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener" class="btn-cta">Join early access →</a>
+    <p class="footer-note">No spam. Just occasional product updates and opportunities to test WaterSports Kaki.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap footer-inner">
+    <a href="/" class="footer-logo">
+      <img src="logo-symbol.png" alt="WaterSports Kaki symbol">
+      <div style="display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:.7rem;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase">Watersports</span>
+        <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.1rem;color:rgba(255,255,255,.9);letter-spacing:.02em;text-transform:uppercase">Kaki</span>
+      </div>
+    </a>
+    <div class="footer-links">
+      <a href="https://instagram.com/watersportskaki" target="_blank" rel="noopener">@watersportskaki</a>
+      <a href="https://instagram.com/lu.zhenna" target="_blank" rel="noopener">@lu.zhenna</a>
+      <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener">Give Feedback</a>
+    </div>
+    <div class="footer-right">Built in Singapore 🇸🇬</div>
+  </div>
+</footer>
+
+</body>
+</html>
