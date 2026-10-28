@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaterSports Kaki · For Partners</title>
+<meta name="description" content="Reach watersports demand when it forms. Join the WaterSports Kaki partner network: watersports operators, experience partners, and complementary businesses worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,800;0,900;1,800&family=Caveat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0D2C5B;
+  --blue:#1565C0;
+  --sky:#2196F3;
+  --sky-light:#E3F2FD;
+  --white:#FFFFFF;
+  --off:#F7FAFF;
+  --mist:#607D8B;
+  --ink:#111827;
+  --star:#F59E0B;
+  --green:#1B5E20;
+  --green-light:#E8F5E9;
+  --max:1120px;
+  --g:clamp(1.25rem,5vw,2.5rem);
+}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(13,44,91,.08)}
+.hdr{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo img{height:46px;width:auto}
+.logo-text{display:flex;flex-direction:row;align-items:center;gap:4px;line-height:1}
+.logo-text .t1{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:var(--navy);letter-spacing:.02em;text-transform:uppercase}
+.logo-text .t2{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.75rem;color:var(--sky);letter-spacing:.02em;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:1.5rem}
+nav a{font-size:.875rem;font-weight:500;color:var(--mist);text-decoration:none;transition:color .15s}
+nav a:hover{color:var(--navy)}
+.btn-nav-outline{border:1.5px solid var(--navy);color:var(--navy)!important;padding:7px 16px;border-radius:999px;font-size:.875rem;font-weight:600;text-decoration:none;transition:background .15s,color .15s}
+.btn-nav-outline:hover{background:var(--navy);color:var(--white)!important}
+
+/* HERO */
+.hero{background:var(--navy);padding:clamp(4rem,9vw,7rem) 0 clamp(3.5rem,8vw,6rem)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{font-size:.8125rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
+h1{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.08;letter-spacing:-.025em;color:var(--white);margin-bottom:1.25rem}
+h1 em{font-style:normal;color:#64B5F6}
+.hero-sub{font-size:clamp(.9375rem,1.8vw,1.0625rem);color:rgba(255,255,255,.72);max-width:44ch;line-height:1.7;margin-bottom:2rem}
+.btn-cta{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--white);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:999px;text-decoration:none;box-shadow:0 4px 20px rgba(33,150,243,.4);transition:transform .15s,box-shadow .15s;border:none;cursor:pointer;font-family:'Inter',sans-serif}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(33,150,243,.5)}
+.hero-note{margin-top:1rem;font-size:.8125rem;color:rgba(255,255,255,.35)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.stat-item{text-align:center;padding:1.5rem 1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px}
+.stat-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:var(--white);line-height:1}
+.stat-label{font-size:.8125rem;color:rgba(255,255,255,.55);margin-top:.375rem;line-height:1.4}
+
+/* HOW IT WORKS */
+.how{background:var(--off);padding:clamp(3rem,7vw,5.5rem) 0}
+.sec-head{margin-bottom:3rem}
+.sec-head h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.5vw,2.25rem);color:var(--navy);letter-spacing:-.02em;margin-bottom:.5rem}
+.sec-head p{color:var(--mist);font-size:1rem;max-width:52ch;line-height:1.65}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.step{padding:1.5rem;background:var(--white);border:1.5px solid rgba(13,44,91,.07);border-radius:16px}
+.step-num{width:36px;height:36px;border-radius:10px;background:var(--sky-light);display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:var(--sky);margin-bottom:1rem}
+.step h3{font-family:'Nunito',sans-serif;font-weight:800;font-size:.9375rem;color:var(--navy);margin-bottom:.4rem}
+.step p{font-size:.8125rem;color:var(--mist);line-height:1.55}
+
+/* PARTNER TYPES */
+.types{background:var(--white);padding:clamp(3rem,7vw,5.5rem) 0}
+.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.type-card{border:1.5px solid rgba(13,44,91,.08);border-radius:18px;padding:2rem;transition:border-color .15s,box-shadow .15s}
+.type-card:hover{border-color:var(--sky);box-shadow:0 6px 24px rgba(33,150,243,.1)}
+.type-icon{font-size:2.25rem;margin-bottom:1rem;display:block}
+.type-card h3{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.0625rem;color:var(--navy);margin-bottom:.5rem}
+.type-card p{font-size:.875rem;color:var(--mist);line-height:1.6;margin-bottom:1rem}
+.type-examples{display:flex;flex-wrap:wrap;gap:.375rem}
+.type-tag{font-size:.75rem;padding:3px 10px;border-radius:999px;background:var(--off);color:var(--mist);border:1px solid rgba(13,44,91,.08)}
+
+/* VALUE PROPS */
+.value{background:var(--off);padding:clamp(3rem,7vw,5.5rem) 0}
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.value-copy h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--navy);letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
+.value-copy p{color:var(--mist);font-size:.9375rem;line-height:1.7;margin-bottom:1.5rem;max-width:44ch}
+.value-points{display:flex;flex-direction:column;gap:1rem}
+.vpoint{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;background:var(--white);border:1.5px solid rgba(13,44,91,.07);border-radius:14px}
+.vpoint-icon{width:40px;height:40px;border-radius:10px;background:var(--sky-light);display:flex;align-items:center;justify-content:center;font-size:1.125rem;flex-shrink:0}
+.vpoint h4{font-family:'Nunito',sans-serif;font-weight:800;font-size:.9375rem;color:var(--navy);margin-bottom:3px}
+.vpoint p{font-size:.8125rem;color:var(--mist);line-height:1.55}
+
+/* EXPERIENCE */
+.experience{background:var(--navy);padding:clamp(3rem,7vw,5.5rem) 0}
+.experience h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3.5vw,2.25rem);color:var(--white);letter-spacing:-.02em;margin-bottom:.75rem}
+.experience > .wrap > p{color:rgba(255,255,255,.65);font-size:1rem;max-width:52ch;line-height:1.7;margin-bottom:2.5rem}
+.exp-flow{display:flex;align-items:stretch;gap:0;margin-bottom:1.5rem}
+.exp-node{flex:1;text-align:center;padding:1.5rem 1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:0}
+.exp-node:first-child{border-radius:14px 0 0 14px}
+.exp-node:last-child{border-radius:0 14px 14px 0}
+.exp-node-icon{font-size:1.75rem;margin-bottom:.625rem;display:block}
+.exp-node h4{font-family:'Nunito',sans-serif;font-weight:800;font-size:.875rem;color:var(--white);margin-bottom:4px}
+.exp-node p{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.45}
+.exp-divider{width:1px;background:rgba(255,255,255,.1);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.exp-divider span{color:rgba(255,255,255,.25);font-size:.875rem;background:var(--navy);padding:4px 0;position:relative;z-index:1}
+.exp-result{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.exp-result-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.125rem;color:var(--white)}
+.exp-result-sub{font-size:.875rem;color:rgba(255,255,255,.6);margin-top:3px}
+.exp-result-tags{display:flex;gap:.5rem;flex-wrap:wrap}
+.exp-result-tag{font-size:.75rem;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.75)}
+
+/* OVERSEAS */
+.overseas{background:var(--white);padding:clamp(3rem,7vw,5.5rem) 0}
+.overseas-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.overseas h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2rem);color:var(--navy);letter-spacing:-.02em;margin-bottom:.75rem;line-height:1.2}
+.overseas p{color:var(--mist);font-size:.9375rem;line-height:1.7;margin-bottom:1rem;max-width:44ch}
+.overseas-badge{display:inline-flex;align-items:center;gap:6px;background:var(--green-light);color:var(--green);font-size:.8125rem;font-weight:600;padding:5px 12px;border-radius:999px;margin-bottom:1.25rem}
+.demand-card{background:var(--off);border:1.5px solid rgba(13,44,91,.07);border-radius:16px;padding:1.5rem}
+.demand-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.demand-card-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:.9375rem;color:var(--navy)}
+.demand-card-badge{font-size:.75rem;padding:3px 10px;border-radius:999px;background:var(--sky-light);color:var(--sky);font-weight:600}
+.demand-rows{display:flex;flex-direction:column;gap:.625rem}
+.demand-row{display:flex;align-items:center;justify-content:space-between;font-size:.8125rem}
+.demand-row-label{color:var(--mist)}
+.demand-row-val{font-weight:600;color:var(--navy)}
+.demand-bar-wrap{height:4px;background:rgba(13,44,91,.08);border-radius:999px;margin-top:.375rem;overflow:hidden}
+.demand-bar{height:4px;border-radius:999px;background:var(--sky)}
+
+/* REGISTER FORM */
+.register{background:var(--off);padding:clamp(3rem,7vw,5.5rem) 0}
+.register-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.register-copy h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--navy);letter-spacing:-.02em;margin-bottom:.75rem;line-height:1.2}
+.register-copy p{color:var(--mist);font-size:.9375rem;line-height:1.7;margin-bottom:1.5rem}
+.register-note{font-size:.8125rem;color:var(--mist);padding:.875rem 1rem;background:var(--white);border-radius:10px;border:1.5px solid rgba(13,44,91,.07);line-height:1.55}
+.form-card{background:var(--white);border:1.5px solid rgba(13,44,91,.08);border-radius:20px;padding:2rem}
+.form-group{margin-bottom:1.25rem}
+.form-label{font-size:.8125rem;font-weight:600;color:var(--navy);margin-bottom:.375rem;display:block}
+.form-input{width:100%;padding:.75rem 1rem;border:1.5px solid rgba(13,44,91,.12);border-radius:10px;font-size:.9375rem;color:var(--ink);font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;background:var(--white)}
+.form-input:focus{border-color:var(--sky)}
+.form-select{width:100%;padding:.75rem 1rem;border:1.5px solid rgba(13,44,91,.12);border-radius:10px;font-size:.9375rem;color:var(--ink);font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;background:var(--white);appearance:none;cursor:pointer}
+.form-select:focus{border-color:var(--sky)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.checkbox-group{display:flex;flex-direction:column;gap:.5rem}
+.checkbox-item{display:flex;align-items:center;gap:.625rem;font-size:.875rem;color:var(--ink);cursor:pointer}
+.checkbox-item input{width:16px;height:16px;accent-color:var(--sky);cursor:pointer}
+.form-submit{width:100%;padding:.9rem;background:var(--sky);color:var(--white);font-size:1rem;font-weight:600;border:none;border-radius:999px;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s;margin-top:.5rem}
+.form-submit:hover{opacity:.88}
+.form-privacy{font-size:.75rem;color:var(--mist);text-align:center;margin-top:.75rem}
+
+/* FOOTER */
+footer{background:#071830;padding:1.75rem 0}
+.foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.foot-logo img{height:34px}
+.foot-links{display:flex;align-items:center;gap:1.5rem}
+.foot-links a{font-size:.8125rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .15s}
+.foot-links a:hover{color:rgba(255,255,255,.8)}
+.foot-r{font-size:.8125rem;color:rgba(255,255,255,.3)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:1fr 1fr}
+  .types-grid{grid-template-columns:1fr}
+  .value-grid,.overseas-layout,.register-layout{grid-template-columns:1fr;gap:2.5rem}
+  .exp-flow{flex-direction:column}
+  .exp-node:first-child{border-radius:14px 14px 0 0}
+  .exp-node:last-child{border-radius:0 0 14px 14px}
+  .exp-divider{width:100%;height:1px;flex-direction:row}
+  .exp-divider span{padding:0 4px}
+}
+@media(max-width:640px){
+  nav .nav-hide{display:none}
+  .steps{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap hdr">
+    <a href="/" class="logo">
+      <img src="logo-symbol.png" alt="WaterSports Kaki">
+      <div class="logo-text">
+        <span class="t1">Watersports</span>
+        <span class="t2">Kaki</span>
+      </div>
+    </a>
+    <nav>
+      <a href="/" class="nav-hide">For users</a>
+      <a href="https://instagram.com/watersportskaki" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--mist)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mist)" stroke="none"/></svg>
+      </a>
+      <a href="https://forms.gle/8f7c6sbGDpw2B8ET6" target="_blank" rel="noopener" class="btn-nav-outline">Join the partner network</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">WaterSports Kaki · Partner Network</div>
+        <h1>Reach watersports demand <em>when it forms.</em></h1>
+        <p class="hero-sub">WaterSports Kaki is building a Singapore-based watersports community. Whether you run a watersports school, organise events, offer photography, serve food, or provide another service that makes an experience better and we'd like to hear from you.</p>
+        <a href="https://forms.gle/8f7c6sbGDpw2B8ET6" target="_blank" rel="noopener" class="btn-cta">Join the partner network →</a>
+        <p class="hero-note">Open to partners worldwide. No commitment required at this stage.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">SG</div>
+          <div class="stat-label">Consumer community starting in Singapore</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">🌏</div>
+          <div class="stat-label">Partner network open worldwide</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0→</div>
+          <div class="stat-label">Early stage. Join before the demand arrives.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How WSK works for partners</h2>
+      <p>WSK aggregates user intent into meaningful demand, then connects that demand with partners who can deliver the experience.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Users express interest</h3>
+        <p>"I want to dive in the Philippines in March." A low-commitment signal, not a booking.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>WSK identifies compatible demand</h3>
+        <p>Compatible users are grouped by activity, destination, dates, skill level and budget.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Relevant partners are connected</h3>
+        <p>Partners serving the right activity and destination hear about the opportunity, with demonstrated demand already behind it.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Partner delivers the experience</h3>
+        <p>WSK connects demand with the right businesses. Partners remain responsible for the actual experience and fulfillment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER TYPES -->
+<section class="types">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Who can join the partner network</h2>
+      <p>WSK is not just a directory for watersports schools. Any business that can contribute to a better watersports experience is welcome.</p>
+    </div>
+    <div class="types-grid">
+      <div class="type-card">
+        <span class="type-icon">🌊</span>
+        <h3>Activity operators</h3>
+        <p>The businesses that provide the core watersports activity. WSK helps you reach relevant, qualified demand, locally and from Singapore travellers going overseas.</p>
+        <div class="type-examples">
+          <span class="type-tag">Windsurfing</span>
+          <span class="type-tag">Diving</span>
+          <span class="type-tag">Wakesurfing</span>
+          <span class="type-tag">Kayaking</span>
+          <span class="type-tag">Kitesurfing</span>
+          <span class="type-tag">Surfing</span>
+          <span class="type-tag">Sailing</span>
+        </div>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">✨</span>
+        <h3>Experience partners</h3>
+        <p>Businesses that make an activity into something more memorable. Eventually, WSK can help you find other partners to collaborate with around real customer demand.</p>
+        <div class="type-examples">
+          <span class="type-tag">Photography & video</span>
+          <span class="type-tag">F&B</span>
+          <span class="type-tag">Event organisers</span>
+          <span class="type-tag">Accommodation</span>
+          <span class="type-tag">Transport</span>
+        </div>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">🤝</span>
+        <h3>Commercial partners</h3>
+        <p>Brands, sponsors and tourism partners who want to reach an engaged, verified watersports community.</p>
+        <div class="type-examples">
+          <span class="type-tag">Watersports brands</span>
+          <span class="type-tag">Equipment companies</span>
+          <span class="type-tag">Sponsors</span>
+          <span class="type-tag">Tourism boards</span>
+          <span class="type-tag">Venues</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPS -->
+<section class="value">
+  <div class="wrap">
+    <div class="value-grid">
+      <div class="value-copy">
+        <h2>What WSK offers partners</h2>
+        <p>Not just traffic. Qualified demand from people who have already indicated what they want to do, where, and when.</p>
+        <p>We're at an early stage. Join now and be part of shaping how the platform works for partners.</p>
+      </div>
+      <div class="value-points">
+        <div class="vpoint">
+          <div class="vpoint-icon">🎯</div>
+          <div>
+            <h4>Find customers</h4>
+            <p>Access relevant, qualified watersports demand. Not generic website traffic. People who have already said what they want to do.</p>
+          </div>
+        </div>
+        <div class="vpoint">
+          <div class="vpoint-icon">📈</div>
+          <div>
+            <h4>Fill capacity</h4>
+            <p>WSK aggregates fragmented individual interest until it becomes a commercially viable group. Sessions that wouldn't otherwise happen.</p>
+          </div>
+        </div>
+        <div class="vpoint">
+          <div class="vpoint-icon">✈️</div>
+          <div>
+            <h4>Reach Singapore travellers</h4>
+            <p>You don't need to be based in Singapore. When Singapore users want your activity at your destination, WSK connects you.</p>
+          </div>
+        </div>
+        <div class="vpoint">
+          <div class="vpoint-icon">🔗</div>
+          <div>
+            <h4>Find business partners</h4>
+            <p>Eventually, WSK can help complementary businesses find each other around real customer demand and co-create experiences worth doing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE CREATION -->
+<section class="experience">
+  <div class="wrap">
+    <h2>Beyond the activity booking</h2>
+    <p>A great watersports day is often more than the activity itself. WSK is designed for partners to eventually collaborate around real customer demand.</p>
+    <div class="exp-flow">
+      <div class="exp-node">
+        <span class="exp-node-icon">👥</span>
+        <h4>Customer demand</h4>
+        <p>12 people want a beginner wakesurf social on Saturday</p>
+      </div>
+      <div class="exp-divider"><span>+</span></div>
+      <div class="exp-node">
+        <span class="exp-node-icon">🌊</span>
+        <h4>Wakesurf operator</h4>
+        <p>Beginner session and coaching</p>
+      </div>
+      <div class="exp-divider"><span>+</span></div>
+      <div class="exp-node">
+        <span class="exp-node-icon">📸</span>
+        <h4>Photographer</h4>
+        <p>Action shots and drone footage</p>
+      </div>
+      <div class="exp-divider"><span>+</span></div>
+      <div class="exp-node">
+        <span class="exp-node-icon">🍽️</span>
+        <h4>F&B partner</h4>
+        <p>Waterfront dinner after</p>
+      </div>
+    </div>
+    <div class="exp-result">
+      <div>
+        <div class="exp-result-title">Wakesurf & Sunset Social</div>
+        <div class="exp-result-sub">A single experience created by three businesses around demonstrated demand</div>
+      </div>
+      <div class="exp-result-tags">
+        <span class="exp-result-tag">Beginner session</span>
+        <span class="exp-result-tag">Action photography</span>
+        <span class="exp-result-tag">Waterfront dinner</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERSEAS -->
+<section class="overseas">
+  <div class="wrap">
+    <div class="overseas-layout">
+      <div>
+        <div class="overseas-badge">🌏 Partner network · worldwide</div>
+        <h2>Your business doesn't need to be in Singapore.</h2>
+        <p>WSK's consumer community is starting in Singapore, but Singapore-based users already want to do watersports overseas.</p>
+        <p>If you run a dive centre in the Philippines, a kitesurf school in Vietnam, a surf school in Bali, or any other watersports business, you can register now. When compatible demand from Singapore users forms, we'll be in touch.</p>
+        <p style="font-size:.875rem;color:var(--mist)">We approach overseas operators with demonstrated demand, not an empty invitation to join a marketplace.</p>
+      </div>
+      <div class="demand-card">
+        <div class="demand-card-header">
+          <div class="demand-card-title">🤿 Philippines · Diving · March</div>
+          <div class="demand-card-badge">Demand forming</div>
+        </div>
+        <div class="demand-rows">
+          <div>
+            <div class="demand-row">
+              <span class="demand-row-label">Interested users</span>
+              <span class="demand-row-val">11</span>
+            </div>
+            <div class="demand-bar-wrap"><div class="demand-bar" style="width:73%"></div></div>
+          </div>
+          <div>
+            <div class="demand-row">
+              <span class="demand-row-label">Compatible dates</span>
+              <span class="demand-row-val">8</span>
+            </div>
+            <div class="demand-bar-wrap"><div class="demand-bar" style="width:53%"></div></div>
+          </div>
+          <div>
+            <div class="demand-row">
+              <span class="demand-row-label">Compatible skill level</span>
+              <span class="demand-row-val">7</span>
+            </div>
+            <div class="demand-bar-wrap"><div class="demand-bar" style="width:47%"></div></div>
+          </div>
+          <div>
+            <div class="demand-row">
+              <span class="demand-row-label">Operator coverage</span>
+              <span class="demand-row-val" style="color:#E57373">None yet</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:1.25rem;padding:.875rem;background:var(--sky-light);border-radius:10px;font-size:.8125rem;color:var(--blue);line-height:1.5">
+          This is the signal WSK uses to approach relevant operators. Register now to be considered for opportunities like this.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER FORM -->
+<section class="register" id="register">
+  <div class="wrap">
+    <div class="register-layout">
+      <div class="register-copy">
+        <h2>Join the partner network</h2>
+        <p>Tell us about your business. We'll be in touch when WSK has relevant opportunities for you, or when we're ready to onboard partners in your category.</p>
+        <div class="register-note">
+          Joining the partner network is free and does not guarantee leads, bookings, or a place in the platform. We're validating demand and building the right product before making commitments to partners.
+        </div>
+      </div>
+      <div class="form-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 2rem;gap:1.5rem">
+        <div style="font-size:3rem">🤝</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:var(--navy);margin-bottom:.5rem">Register your interest</div>
+          <p style="font-size:.9375rem;color:var(--mist);line-height:1.65;max-width:36ch">Takes less than 2 minutes. Tell us about your business and we'll be in touch when WSK has relevant opportunities for you.</p>
+        </div>
+        <a href="https://forms.gle/8f7c6sbGDpw2B8ET6" target="_blank" rel="noopener" class="btn-cta" style="width:100%;justify-content:center">Join the partner network →</a>
+        <p style="font-size:.75rem;color:var(--mist)">Your details are used only to contact you about WSK partnership opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <a href="/" class="foot-logo">
+      <img src="logo-symbol.png" alt="WaterSports Kaki">
+      <div style="display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:.7rem;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase">Watersports</span>
+        <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.1rem;color:rgba(255,255,255,.9);letter-spacing:.02em;text-transform:uppercase">Kaki</span>
+      </div>
+    </a>
+    <div class="foot-links">
+      <a href="/">For users</a>
+      <a href="https://instagram.com/watersportskaki" target="_blank" rel="noopener">@watersportskaki</a>
+    </div>
+    <div class="foot-r">© 2026 WaterSports Kaki · Starting from Singapore 🇸🇬</div>
+  </div>
+</footer>
+
+</body>
+</html>
