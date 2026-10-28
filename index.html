@@ -159,6 +159,62 @@ footer{background:#071830;padding:1.75rem 0}
   h1 .handwrite{font-size:2.6rem}
   .sport-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* FEATURE STRIP */
+.features{background:var(--off-white);padding:2rem 0 2.5rem}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.feat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem}
+.feat-icon{color:var(--sky)}
+.feat h3{font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:var(--navy);margin-bottom:.2rem}
+.feat p{font-size:.875rem;color:var(--mist);line-height:1.5}
+.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+
+/* HAMBURGER (hidden on desktop) */
+.hamburger{display:none;background:none;border:0;color:var(--navy);width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;border-radius:10px;-webkit-tap-highlight-color:transparent}
+.hamburger .ham-close{display:none}
+.hamburger[aria-expanded="true"] .ham-open{display:none}
+.hamburger[aria-expanded="true"] .ham-close{display:inline}
+.mobile-menu{display:none}
+
+/* MOBILE (matches responsive mockup, <=768px). Desktop is untouched. */
+@media(max-width:768px){
+  nav{display:none}
+  .hamburger{display:flex}
+  .hdr{height:60px}
+  .logo img{height:36px}
+  .logo-text .t1{font-size:.95rem}
+  .logo-text .t2{font-size:1.3rem}
+  .mobile-menu{position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:1px solid rgba(13,44,91,.08);box-shadow:0 12px 24px rgba(13,44,91,.1);padding:.5rem var(--g) 1rem;flex-direction:column}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{padding:.9rem 0;font-size:1rem;font-weight:500;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(13,44,91,.06)}
+  .mobile-menu a.mm-partner{margin-top:.75rem;border:0;background:var(--navy);color:var(--white);text-align:center;border-radius:999px;padding:.8rem;font-weight:600}
+
+  .hero{min-height:0;align-items:stretch}
+  .hero::after{display:none}
+  .hero-bg{background-position:78% top;background-size:auto 100%}
+  .hero-overlay{background:linear-gradient(to bottom,rgba(13,44,91,.25) 0%,rgba(13,44,91,0) 22%,rgba(13,44,91,0) 38%,rgba(13,44,91,.78) 66%,rgba(13,44,91,.96) 100%)}
+  .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;min-height:min(640px,calc(100svh - 60px));padding-top:1rem;padding-bottom:1.25rem}
+  .hero-content{display:contents}
+  .hero-badge{align-self:flex-start;margin:0 0 auto;font-size:.6875rem;padding:4px 10px}
+  .handwrite-aside{top:3.4rem;right:var(--g);font-size:1.15rem}
+  h1{font-size:2.15rem;margin-top:12rem;margin-bottom:.25rem;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+  h1 .handwrite{font-size:2.4rem}
+  .hero-sub{font-size:.875rem;margin:.5rem 0 1.1rem;max-width:none;color:rgba(255,255,255,.88)}
+  .btn-cta{width:100%;justify-content:center;padding:1rem 1.25rem}
+  .hero-features{display:none}
+
+  .features{padding:1rem 0 1.25rem}
+  .features-grid{grid-template-columns:1fr;gap:.6rem}
+  .feat{flex-direction:row;align-items:center;text-align:left;gap:.9rem;background:var(--white);border:1px solid rgba(13,44,91,.07);border-radius:14px;padding:.8rem;box-shadow:0 2px 10px rgba(13,44,91,.05)}
+  .feat-icon{flex-shrink:0;width:52px;height:52px;border-radius:12px;background:var(--sky-light);display:flex;align-items:center;justify-content:center}
+  .feat h3{font-size:.9375rem;margin-bottom:.1rem}
+  .feat p{font-size:.8125rem;line-height:1.4}
+
+  .profile-grid{grid-template-columns:1fr}
+  .footer-links{flex-wrap:wrap;gap:.75rem 1.25rem}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  body{overflow-x:clip}
+}
 @media(prefers-reduced-motion:reduce){
   .badge-dot{animation:none}
   .btn-cta,.need-chip,.exp-card{transition:none}
@@ -185,6 +241,15 @@ footer{background:#071830;padding:1.75rem 0}
       </a>
       <a href="/operators.html" class="btn-nav">For Partners →</a>
     </nav>
+    <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path class="ham-open" d="M4 6h16M4 12h16M4 18h16"/><path class="ham-close" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="https://forms.gle/Lyuaw8Tbvgj7xnPG7" target="_blank" rel="noopener">Give Feedback</a>
+    <a href="https://instagram.com/watersportskaki" target="_blank" rel="noopener">Instagram</a>
+    <a href="/operators.html" class="mm-partner">For Partners →</a>
   </div>
 </header>
 
@@ -193,7 +258,7 @@ footer{background:#071830;padding:1.75rem 0}
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="handwrite-aside">Learn new sports.<br>Make new friends.</div>
-  <div style="width:100%;padding-left:var(--g);padding-right:var(--g)">
+  <div class="hero-inner" style="width:100%;padding-left:var(--g);padding-right:var(--g)">
   <div class="hero-content">
     <div class="hero-badge">
       <div class="badge-dot"></div>
@@ -217,7 +282,27 @@ footer{background:#071830;padding:1.75rem 0}
   </div>
 </section>
 
-
+<!-- FEATURE STRIP -->
+<section class="features" aria-label="What you get">
+  <div class="wrap features-grid">
+    <div class="feat">
+      <div class="feat-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+      <div class="feat-text"><h3>Real-time conditions</h3><p>Wind, waves and weather at your favourite spots</p></div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="feat-text"><h3>Find kakis</h3><p>Meet people with similar interests and schedules</p></div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z"/><path d="M21 14 10 2 3 14h18Z"/><path d="M10 2v16"/></svg></div>
+      <div class="feat-text"><h3>Explore new sports</h3><p>Windsurfing, wakesurfing, wakeboarding and more</p></div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div class="feat-text"><h3>Beginner friendly</h3><p>Tips, guides and a supportive community</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- VALIDATION -->
 <section class="validation">
@@ -421,7 +506,7 @@ footer{background:#071830;padding:1.75rem 0}
       <h2>Your Water Profile grows every time you get out.</h2>
       <p>Every session counts. WSK tracks what you've done, who you've done it with, and what you've unlocked along the way.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem">
+    <div class="profile-grid">
       <div style="background:var(--white);border:1.5px solid rgba(13,44,91,.07);border-radius:18px;padding:2rem;text-align:center">
         <div style="font-size:2.5rem;margin-bottom:.75rem">🌊</div>
         <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.75rem;color:var(--navy)">Water Days</div>
@@ -493,5 +578,15 @@ footer{background:#071830;padding:1.75rem 0}
   </div>
 </footer>
 
+<script>
+(function(){
+  var b=document.getElementById('menuBtn'),m=document.getElementById('mobileMenu');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+  b.addEventListener('click',function(){set(!m.classList.contains('open'))});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  window.addEventListener('resize',function(){if(innerWidth>768)set(false)});
+})();
+</script>
 </body>
 </html>
