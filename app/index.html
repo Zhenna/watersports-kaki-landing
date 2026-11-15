@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0D2C5B">
+<title>WaterSports Kaki &middot; Check conditions</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Caveat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <img src="logo-emblem.png" alt="">
+  <div class="brand">WaterSports Kaki</div>
+</header>
+<main>
+  <section class="hero">
+    <h1>Learn watersports.<br><span class="handwrite">Find your kakis.</span></h1>
+    <p class="lede">Know when to go, find people to go with, and discover what to try next.</p>
+  </section>
+
+  <section class="panel">
+    <h2 class="panel-title">Your activity</h2>
+    <div class="controls">
+      <div class="field"><label for="sport">Sport</label><select id="sport"></select></div>
+      <div class="field"><label for="spot">Location</label><select id="spot"></select></div>
+      <div class="field"><label for="level">Skill level</label><select id="level"></select></div>
+    </div>
+    <p class="pilot small">A pilot for windsurfing at East Coast. More sports and places are on the way as more people ask for them.
+      <a id="more-sports" href="#" target="_blank" rel="noopener">Tell us what you'd like next</a></p>
+  </section>
+
+  <h2 id="context" class="section-title">Conditions</h2>
+  <div class="tabs" role="tablist">
+    <button id="tab-now" class="tab on" type="button" role="tab" aria-selected="true">Right now</button>
+    <button id="tab-plan" class="tab" type="button" role="tab" aria-selected="false">Plan ahead</button>
+  </div>
+  <div id="banner" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="banner error">This page needs JavaScript. Check official advisories at weather.gov.sg.</p></noscript>
+
+  <div id="pane-now">
+    <p class="updated-row">
+      <span id="updated" class="muted" aria-live="polite"></span>
+      <button id="refresh" class="link-btn" type="button" aria-label="Refresh conditions">&#8635; Refresh</button>
+    </p>
+    <div id="now-status" role="status" aria-live="polite" hidden></div>
+    <div class="grid">
+      <section id="wind-panel" class="card"></section>
+      <section id="lightning-panel" class="card"></section>
+    </div>
+    <p class="crosslink"><button id="go-plan" class="link-btn" type="button">Planning another day? See Plan ahead</button></p>
+  </div>
+
+  <div id="pane-plan" hidden>
+    <section id="plan" class="card"></section>
+    <p class="crosslink"><button id="go-now" class="link-btn" type="button">Want the conditions right now? See Right now</button></p>
+  </div>
+
+  <section id="about" class="plain"></section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
